@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTech Academy - Registro de Servicios Académicos</title>
+    
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    
+    <link rel="stylesheet" href="entregable.css">
+</head>
+<body>
+
+    
+    <header class="bg-white shadow-sm sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light container">
+            <a class="navbar-brand fw-bold text-primary" href="#">EduTech</a>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="inicio" class="hero-section text-center text-lg-start">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <h1 class="display-4 fw-bold mb-3">Forma tu futuro con educación de calidad</h1>
+                        <p class="lead mb-4">Programas técnicos diseñados para ayudarte a conseguir tu primer empleo en tecnología.</p>
+                        <a href="#registro" class="btn btn-custom btn-lg">Empezar Registro</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="programas" class="py-5">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-5">Nuestros Programas Técnicos</h2>
+                
+                <div class="contenedor-carreras">
+                    <div class="card card-carrera p-3 bg-white rounded-3">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">Desarrollo de Software</h5>
+                            <p class="card-text text-muted">Aprende a programar páginas web, sistemas informáticos y aplicaciones móviles desde cero.</p>
+                            <a href="#registro" class="text-decoration-none fw-bold">Inscribirme &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-carrera p-3 bg-white rounded-3">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">Soporte TI y Redes</h5>
+                            <p class="card-text text-muted">Aprende a configurar servidores, dar mantenimiento a equipos y proteger redes empresariales.</p>
+                            <a href="#registro" class="text-decoration-none fw-bold">Inscribirme &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="registro" class="py-5 bg-white">
+            <div class="container" style="max-width: 500px;">
+                <div class="p-4 border rounded-3 bg-light shadow-sm">
+                    <h3 class="text-center fw-bold mb-3">Regístrate Ahora</h3>
+                    
+                    <form id="formularioRegistro" action="/procesar" method="POST" novalidate>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label fw-bold">Nombre Completo</label>
+                            <input type="text" class="form-control" id="nombre">
+                            <div class="text-danger small mt-1 d-none" id="errNombre">Escribe tu nombre completo.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="correo" class="form-label fw-bold">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="correo">
+                            <div class="text-danger small mt-1 d-none" id="errCorreo">Ingresa un correo electrónico válido.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label fw-bold">Número de Celular</label>
+                            <input type="tel" class="form-control" id="telefono">
+                            <div class="text-danger small mt-1 d-none" id="errTelefono">El celular debe tener 9 números.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="carrera" class="form-label fw-bold">Curso de Interés</label>
+                            <select class="form-select" id="carrera">
+                                <option value="">Selecciona una carrera...</option>
+                                <option value="software">Desarrollo de Software</option>
+                                <option value="redes">Soporte TI y Redes</option>
+                            </select>
+                            <div class="text-danger small mt-1 d-none" id="errCarrera">Elige una opción de la lista.</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-custom w-100 py-2 mt-2" id="btnEnviar">Enviar Inscripción</button>
+                    </form>
+
+                    <div class="alert alert-success d-none mt-3 text-center" id="mensajeExito" role="alert">
+                        <strong>¡Éxito!</strong> Tus datos se guardaron correctamente.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 text-center bg-dark text-white">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 EduTech Academy. Senati Trabajo Final.</p>
+        </div>
+    </footer>
+    
+    <script src="https://jsdelivr.net"></script>
+    <script src="entregable.js"></script>
+</body>
+</html>

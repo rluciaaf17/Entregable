@@ -1,0 +1,41 @@
+:root {
+    --azul-institucional: #0A2540;
+    --naranja-cta: #FF6B35;
+    --blanco-fondo: #F8F9FA;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--blanco-fondo);
+}
+
+.hero-section {
+    background-color: var(--azul-institucional) !important;
+    color: white !important;
+    padding: 80px 0;
+}
+
+.contenedor-carreras {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-carrera {
+    flex: 1 1 300px; 
+    max-width: 400px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.btn-custom {
+    background-color: var(--naranja-cta) !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+
+.d-none {
+    display: none !important;
+}
